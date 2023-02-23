@@ -45,14 +45,36 @@ public class HlavniProgram {
         zofka.move(130);
         nakresliKruh(20, Color.pink);
 
+        zofka.penUp();
+        zofka.move(120);
+        zofka.turnLeft(162);
+
+        double stranaTrojuholnika = 100;
+        double preponaT = Math.sqrt(2*Math.pow(stranaTrojuholnika, 2));
+        zofka.penDown();
+        zofka.setPenColor(Color.black);
+        zofka.move(stranaTrojuholnika);
+        zofka.turnRight(90);
+        zofka.move(stranaTrojuholnika);
+        zofka.turnRight(135);
+        zofka.move(preponaT);
+
+      //  zofka.move(50);
+       // zofka.turnLeft(180);
+
+        //nakresliTrojuholnik(150,Color.blue);
+
+
+
+
         //nakresliKruh(100, Color.pink);
 
        // nakresliStvorec(200, Color.blue);
 
-        /*double stranaT = 100;
+        /*double stranaT = 150;
         double prepona = Math.sqrt(2*Math.pow(stranaT, 2));
-        nakresliPravRovnoTrojuhol(100, prepona, Color.black);
-*/
+        nakresliPravRovnoTrojuhol(100, prepona, Color.black);*/
+
 
     }
 
@@ -68,6 +90,16 @@ public class HlavniProgram {
             zofka.move(velikostStrany);
             zofka.turnLeft(120.0);
         }*/
+
+    public void nakresliTrojuholnik (double velkostStranyT, Color farbaTrojuholnika) {
+        zofka.setPenColor(farbaTrojuholnika);
+        zofka.move(velkostStranyT);
+        zofka.turnLeft(120.0);
+        zofka.move(velkostStranyT);
+        zofka.turnLeft(120.0);
+        zofka.move(velkostStranyT);
+        zofka.turnLeft(120.0);
+    }
 public void nakresliObdlznik2 (double stranaX, double stranaY, Color farbaObdl) {
     zofka.setPenColor(farbaObdl);
     zofka.penDown();
